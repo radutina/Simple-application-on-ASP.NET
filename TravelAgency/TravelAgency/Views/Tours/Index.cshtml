@@ -1,0 +1,43 @@
+﻿@model IEnumerable<TravelAgency.Models.Tour>
+
+@{
+    ViewBag.Title = "Tours";
+}
+
+<h2>Tours</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.kurort.hotel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.count_day)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.kurort.hotel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.count_day)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+    </tr>
+}
+
+</table>

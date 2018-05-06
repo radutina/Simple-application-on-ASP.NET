@@ -1,0 +1,50 @@
+﻿@model TravelAgency.Models.Tour
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Tour</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.kurort.hotel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.kurort.hotel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.count_day)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.count_day)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.price)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.price)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id_tour }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

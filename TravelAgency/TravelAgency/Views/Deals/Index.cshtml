@@ -1,0 +1,46 @@
+﻿@model IEnumerable<TravelAgency.Models.Deal>
+
+@{
+    ViewBag.Title = "Deals";
+}
+
+<h2>Deals</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+           Customer
+        </th>
+        <th>
+            Employee
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.tour.name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.date)
+        </th>
+        <th></th>
+    </tr>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.customer.first_name)
+            @Html.DisplayFor(modelItem => item.customer.last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.eployee.first_name)
+            @Html.DisplayFor(modelItem => item.eployee.last_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.tour.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
+        </td>
+    </tr>
+}
+</table>
